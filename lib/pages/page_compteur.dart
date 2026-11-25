@@ -1,17 +1,66 @@
 import 'package:flutter/widgets.dart';
 import 'package:material_ui/material_ui.dart';
 
-class PageCompteur extends StatelessWidget {
+class PageCompteur extends StatefulWidget {
   const PageCompteur({super.key});
 
   @override
+  State<PageCompteur> createState() => _PageCompteurState();
+}
+
+class _PageCompteurState extends State<PageCompteur> {
+  int _compteur =0;
+  @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
 appBar: AppBar(
   backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
   foregroundColor: Theme.of(context).appBarTheme.foregroundColor,
   title: Text("Page Compteur"),
 ),
+body: Center(
+  child: SafeArea(
+    bottom: true,
+    child: Container(
+      margin: EdgeInsets.all(10),
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Theme.of(context).colorScheme.primary,
+          width: 3,
+        ),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Text("Valeur : ",
+          style: Theme.of(context).textTheme.titleLarge,
+          ),
+          Text("$_compteur",
+          style: Theme.of(context).textTheme.titleMedium,
+          ),
+          Text("Cliquer sur le bouton en bas pour incrémenter", 
+          style: Theme.of(context).textTheme.bodySmall,
+          )
+        ],
+      ),
+    ),
+  ),
+),
+floatingActionButton: FloatingActionButton(
+  onPressed: (){
+    // print("Vous avez cliqué sur le bouton");
+    setState(() {
+       _compteur++;
+    });
+   
+    print("La valeur du compteur est : $_compteur");
+  },
+  child: const Icon(Icons.add),
+  ),
     );
   }
 }

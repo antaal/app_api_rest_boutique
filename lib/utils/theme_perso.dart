@@ -75,52 +75,52 @@ bodySmall: TextStyle(
   useMaterial3: true,
   appBarTheme: AppBarTheme(
     backgroundColor: Colors.green,
-    foregroundColor: Colors.black,
+    foregroundColor: Colors.white,
     centerTitle: true,
   ),
   textTheme: TextTheme(
 titleLarge: TextStyle(
-  color: Colors.black,
+  color: Colors.white,
   fontSize: 24,
   fontWeight: FontWeight.bold,
 ),
 titleMedium: TextStyle(
-  color: Colors.black,
+  color: Colors.white,
   fontSize: 20,
   fontWeight: FontWeight.bold,
 ),
 titleSmall: TextStyle(
-   color: Colors.black,
+   color: Colors.white,
   fontSize: 16,
   fontWeight: FontWeight.bold,
 ),
 headlineLarge: TextStyle(
-  color: Colors.black,
+  color: Colors.white,
   fontSize: 26,
   fontWeight: FontWeight.bold,
 ),
 headlineMedium: TextStyle(
-  color: Colors.black,
+  color: Colors.white,
   fontSize: 22,
   fontWeight: FontWeight.bold,
 ),
 headlineSmall: TextStyle(
-  color: Colors.black,
+  color: Colors.white,
   fontSize: 18,
   fontWeight: FontWeight.bold,
 ),
 bodyLarge: TextStyle(
-  color: Colors.black,
+  color: Colors.white,
   fontSize: 20,
   fontWeight: FontWeight.normal,
 ),
 bodyMedium: TextStyle(
-  color: Colors.black,
+  color: Colors.white,
   fontSize: 16,
   fontWeight: FontWeight.normal,
 ),
 bodySmall: TextStyle(
-  color: Colors.black,
+  color: Colors.white,
   fontSize: 14,
   fontWeight: FontWeight.normal,
 ),

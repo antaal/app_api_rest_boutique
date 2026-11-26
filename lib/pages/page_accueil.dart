@@ -4,6 +4,9 @@ import 'package:flutter/widgets.dart';
 import 'package:material_ui/material_ui.dart';
 import 'dart:convert';
 
+
+// Page d'accueil : affiche la liste des utilisateurs récupérés depuis une API.
+
 class PageAccueil extends StatefulWidget {
   const PageAccueil({super.key});
 
@@ -22,6 +25,8 @@ class _PageAccueilState extends State<PageAccueil> {
     super.initState();
     ApiServices apiServices = ApiServices();
        _isLoading = true;
+  // Appel API asynchrone ; setState() déclenche le rafraîchissement
+    // de l'écran une fois les données reçues.
     apiServices.getData("https://jsonplaceholder.typicode.com/users").then((
       result,
     ){
@@ -55,6 +60,8 @@ class _PageAccueilState extends State<PageAccueil> {
               ),
               borderRadius: BorderRadius.circular(10),
             ),
+  // 3 états : chargement / liste vide / liste des utilisateurs.
+
             child: _isLoading ? 
             CircularProgressIndicator()
             :((data.length > 0)

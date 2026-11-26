@@ -1,5 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 
+// Menu latéral (drawer) avec les liens de navigation principaux de l'app.
 class EndDrawerPerso extends StatefulWidget {
   const EndDrawerPerso({super.key});
 
@@ -22,6 +23,8 @@ class _EndDrawerPersoState extends State<EndDrawerPerso> {
               child: Text('Menu'),                 
             ),
           ),
+       // Lien vers l'accueil. removeUntil(false) vide l'historique
+          // pour éviter d'empiler les pages du menu.
           ListTile(
             leading: Icon(Icons.home),
             tileColor: Theme.of(context).colorScheme.secondary,
@@ -36,7 +39,7 @@ class _EndDrawerPersoState extends State<EndDrawerPerso> {
           ),
          Divider(
           color: Theme.of(context).colorScheme.tertiary, thickness: 2,),
-            
+            // Lien vers le compteur.
                 ListTile(
             leading: Icon(Icons.countertops),
             tileColor: Theme.of(context).colorScheme.secondary,
@@ -52,7 +55,7 @@ class _EndDrawerPersoState extends State<EndDrawerPerso> {
          Divider(
           color: Theme.of(context).colorScheme.tertiary, thickness: 2,),
                 
-           
+           // Lien vers le profil. 
           ListTile(
             leading: Icon(Icons.person),
             tileColor: Theme.of(context).colorScheme.secondary,
@@ -67,6 +70,7 @@ class _EndDrawerPersoState extends State<EndDrawerPerso> {
           ),
          Divider(
           color: Theme.of(context).colorScheme.tertiary, thickness: 2,),
+          // Lien vers la boutique.
                ListTile(
             leading: Icon(Icons.shopping_cart),
             tileColor: Theme.of(context).colorScheme.secondary,
